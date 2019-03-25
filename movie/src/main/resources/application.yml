@@ -1,15 +1,8 @@
 server:
-  port: 8001
-mybatis:
-  mapper-locations: classpath*:mybatis/**/*.xml
-  config-location: classpath:mybatis-config.xml
+  port: 8000
+
 spring:
   datasource:
     username: root
     password: 123456
     url: jdbc:mysql://192.168.0.254:3306/mz_data_move?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false
-  redis:
-    host: 192.168.0.254
-    port: 6379
-    password: 123456
-

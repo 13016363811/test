@@ -2,6 +2,7 @@ package com.zxc2.dao;
 
 import com.zxc2.po.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -12,4 +13,6 @@ import org.springframework.stereotype.Repository;
  */
 @Mapper
 public interface UserMapper {
+
+    User findById(@Param("id")String id);
 }

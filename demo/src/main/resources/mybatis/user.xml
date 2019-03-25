@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.zxc2.dao.UserMapper">
-    <resultMap id="userMap" type="User">
+    <resultMap  id="adminUserMap" type="User">
         <result column="ID" property="id" jdbcType="VARCHAR" />
-        <result column="user_NAME" property="userName" jdbcType="VARCHAR" />
-        <result column="pass_word" property="passWord" jdbcType="VARCHAR" />
+        <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+        <result column="PHONE_NO" property="phoneNo" jdbcType="VARCHAR" />
+        <result column="PASSWD" property="passwd" jdbcType="VARCHAR" />
         <result column="CREATE_TIME" property="createTime" jdbcType="VARCHAR" />
+        <result column="ALIAS_NAME" property="aliasName" jdbcType="VARCHAR" />
+        <result column="STATUS" property="status" jdbcType="VARCHAR" />
+        <result column="ORG_ID" property="orgId" jdbcType="VARCHAR" />
     </resultMap>
+
+
+
+    <select id="findById" resultMap="adminUserMap">
+        SELECT  * from t_admin_user where id=#{id}
+    </select>
+
 
 </mapper>
